@@ -11,6 +11,14 @@ const session = require('express-session');
 
 const Port = process.env.PORT || 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(cookieParser());
+app.use(session({secret:'SchedulerAPI'}));
+
+require('./src/config/passport.js')(app);
+
+
 const userRouter = require('./src/routes/userRoutes');
 const authRouter = require('./src/routes/authRoutes');
 
