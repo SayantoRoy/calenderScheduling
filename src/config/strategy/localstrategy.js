@@ -1,6 +1,7 @@
 const passport = require('passport');
 const { Strategy } = require('passport-local');
-const {MongoClient} = require('mongodb');
+const {MongoClient } = require('mongodb');
+
 
 module.exports = function localstrategy(){
     passport.use(new Strategy(

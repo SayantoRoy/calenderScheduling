@@ -31,8 +31,8 @@ authRouter.route('/signup')
 
 authRouter.route('/signin')
 .post(passport.authenticate('local' , {
-    successMessage: 'Done',
-    failureMessage: 'Not Present'
+    successRedirect: '/auth/profile',
+    failureRedirect: '/'
 }));
 
 
