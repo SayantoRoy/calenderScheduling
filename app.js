@@ -34,7 +34,7 @@ app.use('/users' , userRouter);
 
 
 app.get('/' , (req, res)=> {
-    res.send("Hello There");
+    res.send("Hello This is the Main Page");
 });
 
 app.listen(Port , function(){
